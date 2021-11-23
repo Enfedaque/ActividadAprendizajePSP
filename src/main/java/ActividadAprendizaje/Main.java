@@ -24,6 +24,7 @@ public class Main extends Application {
         Scene scene=new Scene(vbox);
         stage.setScene(scene);
         stage.show();
+
     }
 }
 
