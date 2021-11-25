@@ -1,8 +1,6 @@
-package ActividadAprendizaje;
+package ActividadAprendizaje.Controllers;
 
-import ActividadAprendizaje.Controllers.VentanasController;
 import ActividadAprendizaje.Domain.Descargas;
-import ActividadAprendizaje.Threads.Ventanas;
 import ActividadAprendizaje.Util.R;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -12,9 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +30,7 @@ public class controller{
     public ListView<Descargas> lvTotales;
     public TabPane tpDescargas;
     public Button btStopAll;
-    //Me guardo en una lista cada descarga
+    //Me guardo en una lista cada descarga(cada controller)
     private List<VentanasController> listaVentanas;
 
     //Metodo para activiar el boton de añadir
@@ -56,17 +52,19 @@ public class controller{
 
             //Aqui hago que se cree una pestaña del tabpane cada vez
             FXMLLoader loader=new FXMLLoader();
-            VentanasController miController=new VentanasController();
+            VentanasController miController=new VentanasController(texto);
             loader.setLocation(R.getUI("descargas.fxml"));
             loader.setController(miController);
             VBox general=loader.load();
-            tpDescargas.getTabs().add(new Tab("Descarga", general));
 
-            //Añado la descarga a mi lista de venatnas
+            String nombrePestana=texto.substring(texto.lastIndexOf("/") + 1);
+            tpDescargas.getTabs().add(new Tab(nombrePestana, general));
+
+            //Añado la descarga a mi lista de ventanas
             listaVentanas.add(miController);
 
-        }catch (Exception ex){
-            ex.printStackTrace();
+        }catch (IOException io){
+            io.printStackTrace();
             Alert alert=new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Ha ocurrido algun problema");
             alert.show();
@@ -79,7 +77,7 @@ public class controller{
     public void StopAll(Event event){
         try{
             for (VentanasController miController : listaVentanas){
-                miController.stop();
+                miController.parar();
             }
         }catch (Exception ex){
             Alert alert=new Alert(Alert.AlertType.ERROR);
