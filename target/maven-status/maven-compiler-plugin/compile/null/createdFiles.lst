@@ -1,6 +1,6 @@
 ActividadAprendizaje\Controllers\VentanasController.class
 ActividadAprendizaje\Util\R.class
-ActividadAprendizaje\controller.class
+ActividadAprendizaje\Controllers\controller.class
 ActividadAprendizaje\Main.class
-ActividadAprendizaje\Threads\Ventanas.class
+ActividadAprendizaje\Tasks\Ventanas.class
 ActividadAprendizaje\Domain\Descargas.class

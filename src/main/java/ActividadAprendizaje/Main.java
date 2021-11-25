@@ -1,5 +1,6 @@
 package ActividadAprendizaje;
 
+import ActividadAprendizaje.Controllers.controller;
 import ActividadAprendizaje.Util.R;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -25,6 +26,12 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
 
+    }
+
+    //Metodo para cerar la app
+    @Override
+    public void stop() throws Exception {
+        super.stop();
     }
 }
 
