@@ -1,6 +1,10 @@
-ActividadAprendizaje\Controllers\VentanasController.class
+ActividadAprendizaje\Controllers\completadasController.class
+ActividadAprendizaje\Controllers\fallidasController.class
 ActividadAprendizaje\Util\R.class
+ActividadAprendizaje\Juego\juegoController.class
 ActividadAprendizaje\Controllers\controller.class
+ActividadAprendizaje\Juego\gameTask.class
 ActividadAprendizaje\Main.class
-ActividadAprendizaje\Tasks\Ventanas.class
 ActividadAprendizaje\Domain\Descargas.class
+ActividadAprendizaje\Controllers\VentanasController.class
+ActividadAprendizaje\Tasks\Ventanas.class
