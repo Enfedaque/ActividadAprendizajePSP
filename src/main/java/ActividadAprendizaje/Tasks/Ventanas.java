@@ -1,5 +1,6 @@
 package ActividadAprendizaje.Tasks;
 
+import ActividadAprendizaje.Controllers.VentanasController;
 import javafx.concurrent.Task;
 
 import java.io.BufferedInputStream;
@@ -42,6 +43,7 @@ public class Ventanas extends Task<Integer> {
             totalRead += bytesRead;
 
             if (isCancelled()) {
+
                 return null;
             }
         }
@@ -50,5 +52,10 @@ public class Ventanas extends Task<Integer> {
         updateMessage("100 %");
 
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return url + " / " + file;
     }
 }
