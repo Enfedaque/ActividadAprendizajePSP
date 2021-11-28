@@ -4,7 +4,9 @@ ActividadAprendizaje\Util\R.class
 ActividadAprendizaje\Juego\juegoController.class
 ActividadAprendizaje\Controllers\controller.class
 ActividadAprendizaje\Juego\gameTask.class
+ActividadAprendizaje\Tasks\SplashScreen.class
 ActividadAprendizaje\Main.class
 ActividadAprendizaje\Domain\Descargas.class
 ActividadAprendizaje\Controllers\VentanasController.class
+ActividadAprendizaje\Controllers\splashController.class
 ActividadAprendizaje\Tasks\Ventanas.class
